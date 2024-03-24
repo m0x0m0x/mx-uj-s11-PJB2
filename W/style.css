@@ -37,6 +37,7 @@ nav {
 
 .logo {
   height: 5.25rem;
+  filter: hue-rotate(100deg);
 }
 
 .login {
