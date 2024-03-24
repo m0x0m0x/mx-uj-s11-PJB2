@@ -10,3 +10,7 @@
 
 1. [Demo](https://banklist.netlify.app/) - Demo pwd - U-js / pin 1111
 2. [CursNotes](https://github.com/m0x0m0x/m-ujs-v1/tree/main/cursa) - Source notes
+
+# CU Link
+
+[CuMain](https://github.com/jonasschmedtmann/complete-javascript-course)
