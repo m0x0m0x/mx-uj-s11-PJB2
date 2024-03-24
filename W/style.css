@@ -17,8 +17,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #444;
-  background-color: #f3f3f3;
+  color: #22c55e;
+  background-color: #052e16;
   height: 100vh;
   padding: 2rem;
 }
@@ -55,6 +55,7 @@ nav {
   color: inherit;
   border: 1px solid #fff;
   transition: all 0.3s;
+  background-color: #1e1b4b;
 }
 
 .login__input:focus {
