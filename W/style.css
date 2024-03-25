@@ -60,8 +60,8 @@ nav {
 }
 
 .login__input:focus {
-  outline: none;
-  border: 5px solid #db2777;
+  outline: 5px solid #db2777;
+  box-shadow: 1px 10px 500px 10px hsla(315, 93%, 45%, 0.546);
 }
 
 .login__input::placeholder {
@@ -83,7 +83,8 @@ nav {
 .btn--sort:focus {
   outline: none;
   color: #c026d3;
-  font-size: 3rem;
+  font-size: 2rem;
+  transition: all 0.3s;
 }
 
 /* MAIN */
@@ -298,4 +299,23 @@ h2 {
 
 .timer {
   font-weight: 600;
+}
+
+/* HomeButton */
+.home-button {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #1e1b4b;
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: all 210ms;
+}
+.home-button:hover {
+  box-shadow: 1px 10px 500px 10px hsla(315, 93%, 45%, 0.546);
+  background-color: #22c55e;
+  color: #1e1b4b;
+  font-size: 2rem;
+  outline: 5px solid #db2777;
 }
