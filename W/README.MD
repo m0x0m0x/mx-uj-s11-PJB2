@@ -1,4 +1,7 @@
+<details>
+<summary> 👃 </summary>
 <img src="https://i.postimg.cc/cJDxX85S/image.png" width="300%">
+</details>
 
 # W
 
