@@ -66,6 +66,8 @@ const inputClosePin = document.querySelector(".form__input--pin");
 // ==- you work zone
 
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = "";
+
   movements.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
 
@@ -85,6 +87,8 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+// Code below for seeing the innerHTML
+// console.log(containerMovements.innerHTML);
 //====
 
 /////////////////////////////////////////////////

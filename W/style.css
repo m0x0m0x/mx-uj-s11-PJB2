@@ -163,7 +163,7 @@ nav {
 }
 
 .movements__type--withdrawal {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: linear-gradient(to top right, #e52a5a, #ff585f);
 }
 
 .movements__value {
