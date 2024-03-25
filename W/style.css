@@ -128,7 +128,7 @@ nav {
 /* MOVEMENTS */
 .movements {
   grid-row: 2 / span 3;
-  background-color: #fff;
+  background-color: #14532d;
   border-radius: 1rem;
   overflow: scroll;
 }
@@ -154,7 +154,7 @@ nav {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
-  color: #666;
+  color: #86efac;
 }
 
 .movements__type--deposit {
