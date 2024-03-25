@@ -82,7 +82,8 @@ nav {
 .btn--sort:hover,
 .btn--sort:focus {
   outline: none;
-  color: #777;
+  color: #c026d3;
+  font-size: 3rem;
 }
 
 /* MAIN */
