@@ -14,3 +14,13 @@
 # CU Link
 
 [CuMain](https://github.com/jonasschmedtmann/complete-javascript-course)
+
+# Directory Structure
+
+|          N          |                     ?                      |
+| :-----------------: | :----------------------------------------: |
+|  [`chal`](./chal/)  |            Code challenges work            |
+|    [`cu`](./cu/)    |         Course Work required files         |
+| [`leson`](./leson/) | Lessons not realted to the bankist project |
+| [`utils`](./UTILS/) |             Utility `JS` files             |
+|     [`W`](./W)      |             Bankist actual app             |
