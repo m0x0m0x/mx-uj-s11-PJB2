@@ -38,7 +38,7 @@ console.log(mUSD3);
 subHead("Map Methods");
 
 paraText("Output of function directly into array");
-const mdesc = movements.map((m, i, a) => {
+const mdesc = movements.map((m, i) => {
   if (m > 0) {
     return `Movement ${i + 1}: Put  💰 : ${m}`;
   } else {
@@ -46,3 +46,10 @@ const mdesc = movements.map((m, i, a) => {
   }
 });
 console.log(mdesc);
+
+// Using ternary in this function
+paraText("Using Ternary Operator");
+const mdesc2 = movements.map(
+  (m, i) => `Movement ${i + 1}: You ${m > 0 ? "Put 💰" : "Take 💸"}${m}`
+);
+console.log(mdesc2);
