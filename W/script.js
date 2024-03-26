@@ -87,11 +87,20 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
-const user = "";
+// Function for computing the user name - initials
 
-// Code below for seeing the innerHTML
-// console.log(containerMovements.innerHTML);
-//====
+const createUsername = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLocaleLowerCase()
+      .split(" ")
+      .map((w) => w[0])
+      .join("")
+      .toUpperCase();
+  });
+};
+createUsername(accounts);
+console.log(accounts);
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
