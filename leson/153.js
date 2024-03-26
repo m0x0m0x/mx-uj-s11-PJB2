@@ -10,5 +10,3 @@ mainHead("153: Filter Method");
 subHead("Examine Data");
 console.table(movements);
 console.table(currencies);
-
-console.log("pus");
