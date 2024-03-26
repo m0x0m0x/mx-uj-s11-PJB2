@@ -31,5 +31,18 @@ for (const mov of movements) mUSD2.push(mov * eu2usd);
 console.log(mUSD2);
 
 // Write this as an arrow function
-
+paraText("Writing this as an arrow function");
 const mUSD3 = movements.map((mov) => mov * eu2usd);
+console.log(mUSD3);
+
+subHead("Map Methods");
+
+paraText("Output of function directly into array");
+const mdesc = movements.map((m, i, a) => {
+  if (m > 0) {
+    return `Movement ${i + 1}: Put  💰 : ${m}`;
+  } else {
+    return `Movement ${i + 1}: Take 💸 : ${m}`;
+  }
+});
+console.log(mdesc);

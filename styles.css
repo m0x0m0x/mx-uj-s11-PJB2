@@ -50,7 +50,7 @@ main {
 }
 
 h1 {
-  /* font-family: "Bungee Spice"; */
+  font-family: "Bungee Spice";
   background-image: url("https://i.giphy.com/UYgkFrfCaPJEk.webp");
   font-weight: bold;
   font-size: 3.5rem;
