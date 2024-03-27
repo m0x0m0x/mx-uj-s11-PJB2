@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   color: #22c55e;
-  background-color: #052e16;
+  background-color: #132a13;
   height: 100vh;
   padding: 2rem;
 }
@@ -197,10 +197,12 @@ nav {
 .summary__value--in,
 .summary__value--interest {
   color: #66c873;
+  text-shadow: rgba(102, 113, 232, 0.9) 0px 0px 39px;
 }
 
 .summary__value--out {
   color: #f5465d;
+  text-shadow: rgba(232, 102, 150, 0.9) 0px 0px 39px;
 }
 
 .btn--sort {

@@ -90,9 +90,29 @@ displayMovements(account1.movements);
 // Calculating the main balance now using the reduce function
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, move) => acc + move, 0);
-  labelBalance.textContent = `${balance} EUR`;
+  labelBalance.textContent = `${balance} €`;
 };
 calcDisplayBalance(account1.movements);
+
+// Calc Display summary
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, move) => acc + move, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}`;
+};
+calcDisplaySummary(account1.movements);
 
 // Function for computing the user name - initials
 
@@ -138,10 +158,10 @@ console.log(totalDepositUSD);
 console.log(`%cDebugging Methods`, "color:green");
 console.log(movements);
 const totalDepositUSD2 = movements
-  .filter((mov) => mov < 0)
+  .filter((mov) => mov > 0)
   // .map((mov) => mov * eu2usd)
   .map((mov, i, a) => {
-    console.log(a);
+    // console.log(a);
     return mov * eu2usd;
   })
   .reduce((a, mov) => a + mov, 0);
