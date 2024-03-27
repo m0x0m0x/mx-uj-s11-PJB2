@@ -37,3 +37,12 @@ console.log(global2);
 
 // Getting maximum value from the array
 paraText("Getting the max value from the array ");
+console.table(mvm);
+const max1 = mvm.reduce((a, m) => {
+  if (a > m) {
+    return a;
+  } else {
+    return m;
+  }
+}, 200);
+console.log(max1);
