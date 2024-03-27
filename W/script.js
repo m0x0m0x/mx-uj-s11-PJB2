@@ -87,6 +87,13 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+// Calculating the main balance now using the reduce function
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, move) => acc + move, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+calcDisplayBalance(account1.movements);
+
 // Function for computing the user name - initials
 
 const createUsername = function (accs) {
