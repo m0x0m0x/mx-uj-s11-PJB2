@@ -34,3 +34,6 @@ console.log(bal2);
 paraText("Reduce function wiht arrow funcion format");
 const global2 = mvm.reduce((a, c, i) => a + c, 0);
 console.log(global2);
+
+// Getting maximum value from the array
+paraText("Getting the max value from the array ");
