@@ -122,3 +122,27 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// === Lectures work here
+
+// Take movements, convert EUR to USD and then ADD ALL
+// Chaining Pipelines
+const eu2usd = 1.1;
+
+const totalDepositUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eu2usd)
+  .reduce((a, mov) => a + mov, 0);
+console.log(totalDepositUSD);
+
+// testing the above function and printing the array from map
+console.log(`%cDebugging Methods`, "color:green");
+console.log(movements);
+const totalDepositUSD2 = movements
+  .filter((mov) => mov < 0)
+  // .map((mov) => mov * eu2usd)
+  .map((mov, i, a) => {
+    console.log(a);
+    return mov * eu2usd;
+  })
+  .reduce((a, mov) => a + mov, 0);
+console.log(totalDepositUSD2);
