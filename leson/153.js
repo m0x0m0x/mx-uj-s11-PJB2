@@ -36,3 +36,5 @@ for (const m of mvm) if (m > 0) depositFor.push(m);
 console.log(depositFor);
 
 console.log("hey");
+console.log("jiu");
+console.log("kkk");
