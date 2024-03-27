@@ -36,3 +36,7 @@ for (const m of mvm) if (m > 0) depositFor.push(m);
 console.log(depositFor);
 
 console.log("hey");
+
+subHead("Get all withdrawls from movements (negative numbers)");
+const withdrawals = movements.filter((m) => m < 0);
+console.log(withdrawals);
