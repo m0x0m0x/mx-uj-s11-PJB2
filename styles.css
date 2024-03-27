@@ -59,6 +59,9 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
 }
+h1:hover {
+  background-image: url("https://i.giphy.com/d31wCnXqHpxXUlWg.webp");
+}
 
 h2 {
   font-family: "Bungee Spice";
