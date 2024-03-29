@@ -84,7 +84,6 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
-
 displayMovements(account1.movements);
 
 // Calculating the main balance now using the reduce function
@@ -134,8 +133,37 @@ createUsername(accounts);
 console.log(accounts);
 
 /// Event handlers for login
-btnLogin.addEventListener("click", function () {
-  console.log("LOGIN");
+let currentAccount;
+
+// Input Login Work
+btnLogin.addEventListener("click", function (e) {
+  // Prevent form from submitting
+  e.preventDefault();
+  // console.log("LOGINLick");
+
+  // Find the user name
+  currentAccount = accounts.find(
+    (acc) => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+
+  // Testing Pin now
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display ui and wlecome message
+    labelWelcome.textContent = `LickPussy , ${
+      currentAccount.owner.split(" ")[0]
+    }`;
+    containerApp.style.opacity = 100;
+
+    //Display Movements
+
+    // Display Balance
+
+    //Display Summary
+
+    // Testing login
+    console.log("LOGIN");
+  }
 });
 
 /////////////////////////////////////////////////
