@@ -133,6 +133,11 @@ const createUsername = function (accs) {
 createUsername(accounts);
 console.log(accounts);
 
+/// Event handlers for login
+btnLogin.addEventListener("click", function () {
+  console.log("LOGIN");
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
