@@ -331,4 +331,5 @@ h2 {
   height: 10%;
   display: flex;
   justify-content: center;
+  opacity: 0;
 }

@@ -64,8 +64,10 @@ const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
 // Selecting the background for effect
-
 const loginBG = document.querySelector("body");
+
+// Selecting Booty Vids Footer
+const loginVIDZ = document.querySelector(".vidz");
 
 // ==- you work zone
 
@@ -157,8 +159,13 @@ btnLogin.addEventListener("click", function (e) {
     labelWelcome.textContent = `LickPussy , ${
       currentAccount.owner.split(" ")[0]
     }`;
+
+    // UI Changes
     containerApp.style.opacity = 100;
+
+    // Your Custom Changes
     loginBG.style.backgroundColor = "#132a13";
+    loginVIDZ.style.opacity = 100;
 
     //Display Movements
 
