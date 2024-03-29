@@ -63,6 +63,10 @@ const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
 
+// Selecting the background for effect
+
+const loginBG = document.querySelector("body");
+
 // ==- you work zone
 
 const displayMovements = function (movements) {
@@ -154,6 +158,7 @@ btnLogin.addEventListener("click", function (e) {
       currentAccount.owner.split(" ")[0]
     }`;
     containerApp.style.opacity = 100;
+    loginBG.style.backgroundColor = "#132a13";
 
     //Display Movements
 
