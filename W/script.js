@@ -90,14 +90,14 @@ const displayMovements = function (movements) {
     containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
-displayMovements(account1.movements);
+// displayMovements(account1.movements);
 
 // Calculating the main balance now using the reduce function
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, move) => acc + move, 0);
   labelBalance.textContent = `${balance} €`;
 };
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(account1.movements);
 
 // Calc Display summary
 const calcDisplaySummary = function (movements) {
@@ -121,7 +121,7 @@ const calcDisplaySummary = function (movements) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = `${interest}€`;
 };
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 
 // Function for computing the user name - initials
 
@@ -168,10 +168,13 @@ btnLogin.addEventListener("click", function (e) {
     loginVIDZ.style.opacity = 100;
 
     //Display Movements
+    displayMovements(currentAccount.movements);
 
     // Display Balance
+    calcDisplayBalance(currentAccount.movements);
 
     //Display Summary
+    calcDisplaySummary(currentAccount.movements);
 
     // Testing login
     console.log("LOGIN");
