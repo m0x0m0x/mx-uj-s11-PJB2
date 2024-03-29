@@ -23,3 +23,14 @@ const fwT = mvm.find((m) => m < 0);
 console.log(mvm, fwT);
 
 // Note now the work is continued into the brapist app
+// Writing a for loop that does something similar
+const find1 = function (num) {
+  for (let m of mvm) {
+    if (m === num) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.log(find1(210));
