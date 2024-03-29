@@ -146,6 +146,39 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+// === Text Highlighting from UTIL/text.js , since cant import from outside the module
+function mainHead(headText) {
+  console.log(
+    `%c 
+----------------
+${headText}
+----------------
+        `,
+    "color:yellow;font-size:1.2rem"
+  );
+}
+
+// Sub Headers
+function subHead(subText) {
+  console.log(
+    `%c 
+${subText}
+            `,
+    "color:orange;font-size:15px"
+  );
+}
+
+// Paragraph lines
+
+function paraText(paraText) {
+  console.log(
+    `%c 
+${paraText}
+        `,
+    "color:#15F5BA;font-size:13px;font-style:italic "
+  );
+}
 // === Lectures work here
 
 // Take movements, convert EUR to USD and then ADD ALL
@@ -170,3 +203,10 @@ const totalDepositUSD2 = movements
   })
   .reduce((a, mov) => a + mov, 0);
 console.log(totalDepositUSD2);
+
+// 158: Find method work
+mainHead("158: Find method work");
+console.log(accounts);
+
+const account = accounts.find((a) => a.owner === "Scat Queen Lady");
+console.table(account);
