@@ -23,4 +23,17 @@ console.log(movements);
 // Sorting works on strings
 const mvm = [...movements];
 console.log(mvm);
-console.log(mvm.sort());
+// console.log(mvm.sort());
+paraText("Ascending Order");
+mvm.sort((a, b) => {
+  if (a > b) return 1;
+  if (a < b) return -1;
+});
+console.log(mvm);
+
+paraText("Descending ORder");
+mvm.sort((a, b) => {
+  if (a > b) return -1;
+  if (a < b) return 1;
+});
+console.log(mvm);
