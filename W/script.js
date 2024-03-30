@@ -150,6 +150,7 @@ const updateUI = function (acc) {
   calcDisplaySummary(acc);
 };
 
+//////////////////////////////////////////////////
 /// Event handlers for login
 let currentAccount;
 
@@ -191,6 +192,7 @@ btnLogin.addEventListener("click", function (e) {
   }
 });
 
+///////////////////////////////////////
 // Transfer Function Implementation
 btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
@@ -215,6 +217,26 @@ btnTransfer.addEventListener("click", function (e) {
   }
 });
 
+//////////////////////////////////////
+// Loan Function
+
+btnLoan.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((move) => move >= amount * 0.1)
+  ) {
+    // Add movement
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = "";
+});
+
+///////////////////////////////////////////////////
 // Closing the account
 btnClose.addEventListener("click", function (e) {
   e.preventDefault();
@@ -241,6 +263,9 @@ btnClose.addEventListener("click", function (e) {
   inputCloseUsername = inputClosePin = "";
 });
 
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
