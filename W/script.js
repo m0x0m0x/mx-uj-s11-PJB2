@@ -343,3 +343,28 @@ console.log(accounts);
 
 const account = accounts.find((a) => a.owner === "Scat Queen Lady");
 console.table(account);
+
+///////////////////////////////////
+// Flattening array - to get all balances
+paraText("Accounts Flattening ");
+const accountMovements = accounts.map((a) => a.movements);
+console.log(accountMovements);
+
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+const overallBalance = allMovements.reduce((a, m) => a + m, 0);
+console.log(overallBalance);
+
+paraText("Doing Chaining to get overall balance");
+const overallBalance2 = accounts
+  .map((a) => a.movements)
+  .flat()
+  .reduce((a, m) => a + m, 0);
+console.log(overallBalance2);
+
+// Using FlatMapo - Note it goes one level deep
+paraText("Chaining with flatmap");
+const overallBalance3 = accounts
+  .flatMap((a) => a.movements)
+  .reduce((a, m) => a + m, 0);
+console.log(overallBalance3);
