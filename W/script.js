@@ -219,6 +219,7 @@ btnTransfer.addEventListener("click", function (e) {
 btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   // console.log("delete");
+  inputClosePin;
 
   if (
     inputCloseUsername.value === currentAccount.username &&
@@ -228,8 +229,16 @@ btnClose.addEventListener("click", function (e) {
       (acc) => acc.username === currentAccount.username
     );
     console.log(index);
-    // accounts.splice(index, 1);
+
+    // Delete Account
+    accounts.splice(index, 1);
+
+    // Hide UI
+    containerApp.style.opacity = 0;
+    loginBG.style.backgroundColor = "#3D0000";
+    loginVIDZ.style.opacity = 0;
   }
+  inputCloseUsername = inputClosePin = "";
 });
 
 /////////////////////////////////////////////////
