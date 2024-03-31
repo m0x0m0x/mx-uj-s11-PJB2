@@ -37,3 +37,13 @@ mvm.sort((a, b) => {
   if (a < b) return 1;
 });
 console.log(mvm);
+
+subHead("Better VEsion");
+
+paraText("Acending Version");
+mvm.sort((a, b) => a - b);
+console.log(mvm);
+
+paraText("Descending Version");
+mvm.sort((a, b) => b - a);
+console.log(mvm);
