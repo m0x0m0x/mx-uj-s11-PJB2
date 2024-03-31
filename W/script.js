@@ -71,7 +71,7 @@ const loginVIDZ = document.querySelector(".vidz");
 
 // ==- you work zone
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
   movements.forEach(function (mov, i) {
