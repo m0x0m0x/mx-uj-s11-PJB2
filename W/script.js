@@ -178,6 +178,7 @@ btnLogin.addEventListener("click", function (e) {
 
     // UI Changes
     containerApp.style.opacity = 100;
+    tableApp.style.opacity = 0;
     loginVIDZ.style.opacity = 100;
 
     // Your Custom Changes
