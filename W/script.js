@@ -393,5 +393,5 @@ labelBalance.addEventListener("click", function () {
   console.log(mvmUI);
 
   // Secondary method for creating arrays
-  const mvmUi2 = [...document.querySelector(".movements__value")];
+  const mvmUi2 = [...document.querySelectorAll(".movements__value")];
 });
