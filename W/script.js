@@ -45,6 +45,7 @@ const labelSumInterest = document.querySelector(".summary__value--interest");
 const labelTimer = document.querySelector(".timer");
 
 const containerApp = document.querySelector(".app");
+const tableApp = document.querySelector(".app2");
 const containerMovements = document.querySelector(".movements");
 
 // Selecting Button Elements
@@ -177,6 +178,7 @@ btnLogin.addEventListener("click", function (e) {
 
     // UI Changes
     containerApp.style.opacity = 100;
+    loginVIDZ.style.opacity = 100;
 
     // Your Custom Changes
     loginBG.style.backgroundColor = "#132a13";
