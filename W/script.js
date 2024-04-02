@@ -74,7 +74,7 @@ const loginVIDZ = document.querySelector(".vidz");
 const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = "";
 
-  const movs = sort ? movements.slice().sort((a,b) => a -b) : movements
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
@@ -84,7 +84,7 @@ const displayMovements = function (movements, sort = false) {
       <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-      <div class="movements__value">${mov}</div>
+      <div class="movements__value">${mov}€</div>
     </div>
     `;
 
@@ -266,16 +266,16 @@ btnClose.addEventListener("click", function (e) {
 });
 
 ///////////////////////////////////////////////////
-// Sort Button 
+// Sort Button
 
-// State Variable of sort 
+// State Variable of sort
 let sorted = false;
 
-btnSort.addEventListener('click', function(e) {
-  e.preventDefault()
-  displayMovements(currentAccount.movements, !sorted)
-  sorted = !sorted
-})
+btnSort.addEventListener("click", function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -382,3 +382,16 @@ const overallBalance3 = accounts
   .flatMap((a) => a.movements)
   .reduce((a, m) => a + m, 0);
 console.log(overallBalance3);
+
+// 165: More array methods
+// Extracting the numbeers from the movement array in the UI
+labelBalance.addEventListener("click", function () {
+  const mvmUI = Array.from(
+    document.querySelectorAll(".movements__value"),
+    (elm) => Number(elm.textContent.replace("€", ""))
+  );
+  console.log(mvmUI);
+
+  // Secondary method for creating arrays
+  const mvmUi2 = [...document.querySelector(".movements__value")];
+});
