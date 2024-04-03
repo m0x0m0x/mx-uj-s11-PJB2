@@ -78,3 +78,22 @@ const { dep, wit } = accounts
     { dep: 0, wit: 0 }
   );
 console.log(dep, wit);
+
+subHead("Ex 4 - Convert String to Title Case");
+/*
+Making a function that converts string to titleCase
+eg: This is a case =convert to> This Is a Case
+*/
+
+const ConTitCase = function (title) {
+  // Create array of exceptions
+  const exceptions = ["her", "and"];
+  const titCas = title
+    .toLowerCase()
+    .split(" ")
+    .map((w) => (exceptions.includes(w) ? w : w[0].toUpperCase() + w.slice(1)))
+    .join(" ");
+  return titCas;
+};
+console.log(ConTitCase("smell her armpit"));
+console.log(ConTitCase("smell her armpit and Suck her ass"));
