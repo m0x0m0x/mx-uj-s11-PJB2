@@ -86,14 +86,17 @@ eg: This is a case =convert to> This Is a Case
 */
 
 const ConTitCase = function (title) {
+  const capita = (str) => str[0].toUpperCase() + str.slice(1);
+
   // Create array of exceptions
   const exceptions = ["her", "and"];
   const titCas = title
     .toLowerCase()
     .split(" ")
-    .map((w) => (exceptions.includes(w) ? w : w[0].toUpperCase() + w.slice(1)))
+    .map((w) => (exceptions.includes(w) ? w : capita(w)))
     .join(" ");
-  return titCas;
+  return capita(titCas);
 };
 console.log(ConTitCase("smell her armpit"));
 console.log(ConTitCase("smell her armpit and Suck her ass"));
+console.log(ConTitCase("and ask her to fart in nose"));
