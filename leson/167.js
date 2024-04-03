@@ -32,6 +32,7 @@ subHead("Practice 2");
 // Fund tx = 1000
 
 // method 1
+paraText("Exracting val > 1000");
 const numDep1k = accounts
   .flatMap((a) => a.movements)
   .filter((m) => m >= 1000).length;
@@ -48,3 +49,32 @@ paraText("Understanding Problems with using the ++ operator");
 let a = 10;
 console.log(++a);
 console.log(a);
+
+subHead("Ex 3 - Advanced Reduce");
+// Create object contains sums of deposit and withdrawals
+paraText(
+  "Calculating total deposits and withdrawals using advanved reduce method"
+);
+const { deposits, withdrawals } = accounts
+  .flatMap((a) => a.movements)
+  .reduce(
+    (s, e) => {
+      e > 0 ? (s.deposits += e) : (s.withdrawals += e);
+      return s;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(deposits, withdrawals);
+
+// Same above function in another way
+paraText("Above function in a different ways");
+const { dep, wit } = accounts
+  .flatMap((a) => a.movements)
+  .reduce(
+    (s, e) => {
+      s[e > 0 ? "dep" : "wit"] += e;
+      return s;
+    },
+    { dep: 0, wit: 0 }
+  );
+console.log(dep, wit);
