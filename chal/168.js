@@ -77,3 +77,9 @@ console.log(dgs.some(chkET));
 /// Create array of dogs eating ok amount of food
 paraText("Dogs eating ok amount of food");
 console.log(dgs.filter(chkET));
+
+// Create new array and sort by recommended for portion
+paraText("Sort by recFood now");
+const dgsCopySrt = dgs.slice().sort((a, b) => a.recFood - b.recFood);
+console.log(dgsCopySrt);
+console.table(dgsCopySrt);
