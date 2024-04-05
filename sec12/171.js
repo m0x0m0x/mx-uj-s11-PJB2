@@ -40,10 +40,23 @@ console.log(Number.parseInt("6600sniff", 10));
 console.log(Number.parseFloat("     6969.420 lick"));
 
 paraText("is NAN is not a number");
+// Check if its literally not a number
 console.log(Number.isNaN(20));
 console.log(Number.isNaN("33"));
 
 // this isnt a number so it shows that
 console.log(Number.isNaN(+"33x"));
 
+// Division by zero
 console.log(Number.isNaN(23 / 0));
+
+paraText("isFinite");
+console.log(Number.isFinite(20));
+console.log(Number.isFinite("20"));
+console.log(Number.isFinite(+"20X"));
+console.log(Number.isFinite(23 / 0));
+
+paraText("Using Is Integer");
+console.log(Number.isInteger(23));
+console.log(Number.isInteger(23.0));
+console.log(Number.isInteger(23 / 0));
