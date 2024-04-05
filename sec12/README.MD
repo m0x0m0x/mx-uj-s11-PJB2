@@ -1,4 +1,7 @@
+<details>
+<summary> 👃 </summary>
 <img src="https://i.ibb.co/q0yhGY6/image.png" width="100%">
+</details>
 
 # Section 12 Learning Work
 

@@ -3,9 +3,9 @@
 <img src="https://i.postimg.cc/cJDxX85S/image.png" width="300%">
 </details>
 
-# W
+# W12
 
-> Actual projet files be located here
+> Same as `W` but the work here is being done for Section 12
 
 # Workflow
 
