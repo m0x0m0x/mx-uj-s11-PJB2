@@ -36,7 +36,7 @@ console.log(Number.parseInt("s9lick"));
 // parseINT also accepts a radix
 console.log(Number.parseInt("6600sniff", 10));
 
-//Parse float
+//Parse float - Read value out of a string
 console.log(Number.parseFloat("     6969.420 lick"));
 
 paraText("is NAN is not a number");
