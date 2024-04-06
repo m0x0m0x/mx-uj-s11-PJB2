@@ -7,11 +7,12 @@ This is for testing the math functions when you imported mathjs
 */
 //==import zone==
 import { mainHead, subHead } from "../UTILS/text.js";
-import { sqrt } from "mathjs";
 
 // ===
 mainHead("mathjs Test Zone");
 
 subHead("Testing math.js import");
-console.log(math.sqrt(-200));
-console.log("bast");
+let myNumSqrt100 = math.sqrt(-100).toNumber();
+console.log(myNumSqrt100);
+
+console.log(math.evaluate("12.7 cm to inch").toString());

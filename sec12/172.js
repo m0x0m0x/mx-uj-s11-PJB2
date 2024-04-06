@@ -7,4 +7,4 @@ import { mainHead, paraText, subHead } from "../UTILS/text.js";
 mainHead("172: Math and Rounding");
 
 paraText("Square-root part of Math NameSpace");
-console.log(Math.sqrt(-12));
+console.log(math.sqrt(-12));
