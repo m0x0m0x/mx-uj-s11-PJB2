@@ -12,7 +12,7 @@ import { mainHead, subHead } from "../UTILS/text.js";
 mainHead("mathjs Test Zone");
 
 subHead("Testing math.js import");
-let myNumSqrt100 = math.sqrt(-100).toNumber();
+let myNumSqrt100 = math.sqrt(-100).toString();
 console.log(myNumSqrt100);
-
 console.log(math.evaluate("12.7 cm to inch").toString());
+console.log(math.derivative("x^2 + x", "x").toString());
