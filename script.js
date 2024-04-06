@@ -1,2 +1,2 @@
-console.log('Hello!');
-console.log('Juice')
+console.log("Hello!");
+console.log("Juice");
