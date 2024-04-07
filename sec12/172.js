@@ -46,3 +46,6 @@ paraText("Rounding");
 // Here you are adding some numbers after rounding of pi
 console.log(Math.trunc(Math.PI));
 console.log(Math.round(Math.PI + 5));
+
+// Round UP
+console.log(Math.ceil(Math.PI));
