@@ -25,5 +25,6 @@
 | [`utils`](./UTILS/) |                         Utility `JS` files                         |
 |     [`W`](./W)      |                         Bankist actual app                         |
 |    [`t1`](./t1/)    |       Tests on W for getting initial table on the main page        |
+|    [`t2`](./t2/)    |                            Tests on W2                             |
 |   [`W12`](./W12/)   | Section 12 work which is work on top of W which was for section 11 |
 | [`sec12`](./sec12/) |                      Section 12 Lectures Work                      |
