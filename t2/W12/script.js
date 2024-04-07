@@ -429,5 +429,6 @@ labelBalance.addEventListener("click", function () {
 labelBalance.addEventListener("click", function () {
   [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
     if (i % 2 === 0) row.style.backgroundColor = "black";
+    if (i % 3 === 0) row.style.backgroundColor = "#0B666A";
   });
 });
