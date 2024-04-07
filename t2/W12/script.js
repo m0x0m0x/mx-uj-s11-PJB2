@@ -425,6 +425,7 @@ labelBalance.addEventListener("click", function () {
 
 //////////////////////////
 // From Lesson ///
+// Clicking the main balance , on top right , will execute this function
 labelBalance.addEventListener("click", function () {
   [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
     if (i % 2 === 0) row.style.backgroundColor = "black";
