@@ -422,3 +422,11 @@ labelBalance.addEventListener("click", function () {
   // Secondary method for creating arrays
   const mvmUi2 = [...document.querySelectorAll(".movements__value")];
 });
+
+//////////////////////////
+// From Lesson ///
+labelBalance.addEventListener("click", function () {
+  [...document.querySelectorAll(".movements__row")].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = "black";
+  });
+});
