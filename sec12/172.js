@@ -36,7 +36,7 @@ paraText("Min and Max Num");
 
 const randomIInt = (min, max, iter) => {
   for (let i = 0; i < iter; i++) {
-    console.log(Math.trunc(Math.random() * (max - min) + min));
+    console.log(Math.floor(Math.random() * (max - min) + min));
   }
 };
 
@@ -49,3 +49,18 @@ console.log(Math.round(Math.PI + 5));
 
 // Round UP
 console.log(Math.ceil(Math.PI));
+
+// Round Down
+console.log(Math.floor(Math.PI));
+console.log(Math.floor(2.256564));
+
+// Working with negative numbers
+// Floor is better than trun
+console.log(Math.floor(-69.123213));
+console.log(Math.ceil(-69.123213));
+
+// Floating point numbers
+paraText("Working with decimals or floats");
+console.log((-69.6969).toFixed(2));
+console.log((-69.6969).toFixed(3));
+console.log(Math.PI.toFixed(10));
