@@ -25,3 +25,6 @@ console.log(PI);
 
 // Converting strings to numbers
 console.log(Number("230_000"));
+
+//Using parseint drops numbres after the _
+console.log(parseInt("23_000"));
