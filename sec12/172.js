@@ -26,3 +26,23 @@ paraText("Math Random Numbers");
 console.log(Math.trunc(Math.random() * 6) + 1);
 
 // writing loop for above function
+paraText("Loop to get random numbers");
+for (let i = 0; i < 10; i++) {
+  console.log(Math.trunc(Math.random() * 6) + 1);
+}
+
+paraText("Min and Max Num");
+// This is a function for getting random numbers between min and max
+
+const randomIInt = (min, max, iter) => {
+  for (let i = 0; i < iter; i++) {
+    console.log(Math.trunc(Math.random() * (max - min) + min));
+  }
+};
+
+randomIInt(1, 9, 5);
+
+paraText("Rounding");
+// Here you are adding some numbers after rounding of pi
+console.log(Math.trunc(Math.PI));
+console.log(Math.round(Math.PI + 5));
