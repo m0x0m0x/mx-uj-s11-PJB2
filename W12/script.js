@@ -181,7 +181,7 @@ const updateUI = function (acc) {
 /// Event handlers for login
 let currentAccount;
 
-// Fake Login
+// Fake Login - Disable this to make it back to normal
 currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
