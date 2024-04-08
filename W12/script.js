@@ -195,14 +195,6 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
-const now = new Date();
-const day = `${now.getDate()}`.padStart(2, 0);
-const month = `${now.getMonth() + 1}`.padStart(2, 0);
-const year = now.getUTCFullYear();
-const hour = `${now.getHours()}`.padStart(2, 0);
-const min = now.getMinutes();
-labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
-
 // Format day/month/year
 
 // Input Login Work
@@ -223,6 +215,15 @@ btnLogin.addEventListener("click", function (e) {
     labelWelcome.textContent = `LickPussy , ${
       currentAccount.owner.split(" ")[0]
     }`;
+
+    // Create current date and time
+    const now = new Date();
+    const day = `${now.getDate()}`.padStart(2, 0);
+    const month = `${now.getMonth() + 1}`.padStart(2, 0);
+    const year = now.getUTCFullYear();
+    const hour = `${now.getHours()}`.padStart(2, 0);
+    const min = now.getMinutes();
+    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     // UI Changes
     containerApp.style.opacity = 100;
@@ -265,6 +266,11 @@ btnTransfer.addEventListener("click", function (e) {
     // Do transfer
     currentAccount.movements.push(-amount);
     reciverAcc.movements.push(amount);
+
+    // Add transfer date
+    currentAccount.movementsDates.push(new Date());
+    reciverAcc.movementsDates.push(new Date());
+
     // Update UI function
     updateUI(currentAccount);
   }
