@@ -268,8 +268,8 @@ btnTransfer.addEventListener("click", function (e) {
     reciverAcc.movements.push(amount);
 
     // Add transfer date
-    currentAccount.movementsDates.push(new Date());
-    reciverAcc.movementsDates.push(new Date());
+    currentAccount.movementsDates.push(new Date().toISOString());
+    reciverAcc.movementsDates.push(new Date().toString());
 
     // Update UI function
     updateUI(currentAccount);
@@ -290,6 +290,11 @@ btnLoan.addEventListener("click", function (e) {
   ) {
     // Add movement
     currentAccount.movements.push(amount);
+
+    // Add transfer date
+    currentAccount.movementsDates.push(new Date().toISOString());
+
+    // Update UI
     updateUI(currentAccount);
   }
   inputLoanAmount.value = "";
