@@ -32,3 +32,32 @@ let nu2 = 6969;
 console.log(nu1 * BigInt(nu2));
 
 paraText("Using BigInt for comparison");
+console.log(20n > 15);
+
+// This is false since both the numbers are diff type
+console.log(20n === 20);
+
+// You can see both are diff types
+console.log(typeof 20n);
+console.log(typeof 20);
+
+paraText("Big in Exception - With  Logical Operators");
+// if you use loose operator then it shows tru , since there is type coercion
+console.log(69n == 69);
+
+paraText("Big in Exception - String Operators");
+// Big int converted to a string
+console.log(nu1 + "   bigBoobs");
+
+paraText("Math Operations dont work on BigInt Types");
+console.log(Math.sqrt(23));
+
+// This will give error
+// console.log(Math.sqrt(23n));
+
+paraText("testing Division");
+
+// Gives back closest big int - removes decimals
+console.log(10n / 3n);
+console.log(10 / 3);
+console.log(12n / 4n);
