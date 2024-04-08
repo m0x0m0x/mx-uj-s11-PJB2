@@ -181,6 +181,11 @@ const updateUI = function (acc) {
 /// Event handlers for login
 let currentAccount;
 
+// Fake Login
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
 // Input Login Work
 btnLogin.addEventListener("click", function (e) {
   // Prevent form from submitting
