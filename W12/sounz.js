@@ -33,3 +33,29 @@ loanBtn.addEventListener("click", () => {
     loanSnd.pause();
   }, 2000); // Play the audio for 1 second
 });
+
+////////////////////////////////
+// ==== Transfer Button Sound
+const trfBtn = document.querySelector(".form__btn.form__btn--transfer");
+const trfSnd = document.getElementById("trfSnd");
+trfBtn.addEventListener("click", () => {
+  trfSnd.currentTime = 0.02;
+  trfSnd.play();
+  trfSnd.play();
+  setTimeout(() => {
+    trfSnd.pause();
+  }, 2000); // Play the audio for 1 second
+});
+
+////////////////////////////////
+// ==== CloseSound
+const closeBtn = document.querySelector("form__btn.form__btn--close");
+const closeSnd = document.getElementById("closeSnd");
+closeSnd.addEventListener("click", () => {
+  closeSnd.currentTime = 0.02;
+  closeSnd.play();
+  closeSnd.play();
+  setTimeout(() => {
+    closeSnd.pause();
+  }, 2000); // Play the audio for 1 second
+});

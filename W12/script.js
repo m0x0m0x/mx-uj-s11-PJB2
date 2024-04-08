@@ -222,7 +222,7 @@ btnLogin.addEventListener("click", function (e) {
     const month = `${now.getMonth() + 1}`.padStart(2, 0);
     const year = now.getUTCFullYear();
     const hour = `${now.getHours()}`.padStart(2, 0);
-    const min = now.getMinutes();
+    const min = `${now.getMinutes()}`.padStart(2, 0);
     labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     // UI Changes
@@ -324,7 +324,7 @@ btnClose.addEventListener("click", function (e) {
     loginBG.style.backgroundColor = "#3D0000";
     loginVIDZ.style.opacity = 0;
   }
-  inputCloseUsername = inputClosePin = "";
+  inputCloseUsername = inputClosePin = " ";
 });
 
 ///////////////////////////////////////////////////
