@@ -422,3 +422,6 @@ labelBalance.addEventListener("click", function () {
   // Secondary method for creating arrays
   const mvmUi2 = [...document.querySelectorAll(".movements__value")];
 });
+
+///// 176: Creating Dates Work
+console.log(new Date(account1.movementsDates[0]));
