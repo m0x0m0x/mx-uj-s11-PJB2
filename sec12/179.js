@@ -30,3 +30,8 @@ const formatter = new Intl.DateTimeFormat("en-GB", {
 
 const formattedDate = formatter.format(myDa2);
 console.log(formattedDate);
+
+subHead("Getting the locale");
+const locale = navigator.language;
+console.log("Locale is :");
+console.log(locale);

@@ -214,17 +214,6 @@ updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
 // Experimenting with API
-const now = new Date();
-const options = {
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-  day: "numeric",
-  month: "long", // numeric, long, 2-digit
-  year: "numeric",
-  weekday: "short",
-};
-labelDate.textContent = new Intl.DateTimeFormat("en-GB", options).format(now);
 
 // Input Login Work
 btnLogin.addEventListener("click", function (e) {
@@ -245,14 +234,35 @@ btnLogin.addEventListener("click", function (e) {
       currentAccount.owner.split(" ")[0]
     }`;
 
-    // Create current date and time
+    // // Create current date and time
+    // const now = new Date();
+    // const day = `${now.getDate()}`.padStart(2, 0);
+    // const month = `${now.getMonth() + 1}`.padStart(2, 0);
+    // const year = now.getUTCFullYear();
+    // const hour = `${now.getHours()}`.padStart(2, 0);
+    // const min = `${now.getMinutes()}`.padStart(2, 0);
+    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
+    // Using internationalization api
     const now = new Date();
-    const day = `${now.getDate()}`.padStart(2, 0);
-    const month = `${now.getMonth() + 1}`.padStart(2, 0);
-    const year = now.getUTCFullYear();
-    const hour = `${now.getHours()}`.padStart(2, 0);
-    const min = `${now.getMinutes()}`.padStart(2, 0);
-    labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+    const options = {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      day: "numeric",
+      month: "long", // numeric, long, 2-digit
+      year: "numeric",
+      weekday: "short",
+    };
+
+    // Getting locale from the browser
+    const locale = navigator.language;
+    console.log("Locale is :");
+    console.log(locale);
+
+    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
+      now
+    );
 
     // UI Changes
     containerApp.style.opacity = 100;
