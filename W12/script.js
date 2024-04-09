@@ -260,9 +260,10 @@ btnLogin.addEventListener("click", function (e) {
     console.log("Locale is :");
     console.log(locale);
 
-    labelDate.textContent = new Intl.DateTimeFormat(locale, options).format(
-      now
-    );
+    labelDate.textContent = new Intl.DateTimeFormat(
+      currentAccount.locale,
+      options
+    ).format(now);
 
     // UI Changes
     containerApp.style.opacity = 100;
