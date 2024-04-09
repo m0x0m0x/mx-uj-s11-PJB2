@@ -13,12 +13,12 @@ const account1 = {
   movementsDates: [
     "2019-11-18T21:31:17.178Z",
     "2019-12-23T07:42:02.383Z",
-    "2020-01-28T09:15:04.904Z",
-    "2020-04-01T10:17:24.185Z",
-    "2020-05-08T14:11:59.604Z",
-    "2020-05-27T17:01:17.194Z",
-    "2020-07-11T23:36:17.929Z",
-    "2020-07-12T10:51:36.790Z",
+    "2021-01-28T09:15:04.904Z",
+    "2022-04-01T10:17:24.185Z",
+    "2023-05-08T14:11:59.604Z",
+    "2023-05-27T17:01:17.194Z",
+    "2024-04-08T12:01:20.894Z",
+    "2024-05-08T12:01:20.894Z",
   ],
   currency: "EUR",
   locale: "pt-PT", // de-DE
@@ -36,8 +36,8 @@ const account2 = {
     "2020-01-25T14:18:46.235Z",
     "2020-02-05T16:33:06.386Z",
     "2020-04-10T14:43:26.374Z",
-    "2020-06-25T18:49:59.371Z",
-    "2020-07-26T12:01:20.894Z",
+    "2024-04-08T12:01:20.894Z",
+    "2024-05-08T12:01:20.894Z",
   ],
   currency: "USD",
   locale: "en-US",
@@ -96,15 +96,26 @@ const loginVIDZ = document.querySelector(".vidz");
 
 //////////// ==- you work zone
 
+// Create function to format dates
 const formatMovementDate = function (date) {
   const calcDaysPassed = (date1, date2) =>
-    Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
+    Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
-  const day = `${date.getDate()}`.padStart(2, 0);
-  const month = `${date.getMonth() + 1}`.padStart(2, 0);
-  const year = date.getUTCFullYear();
+  // Calculating days passed
+  const daysPassed = calcDaysPassed(new Date(), date);
+  console.log(daysPassed);
 
-  return `${day}/${month}/${year}`;
+  // Login on the above daysPassed
+  if (daysPassed === 0) return "Today";
+  if (daysPassed === 1) return "Yesterday";
+  if (daysPassed <= 7) return `${daysPassed} days ago`;
+  else {
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getUTCFullYear();
+
+    return `${day}/${month}/${year}`;
+  }
 };
 
 const displayMovements = function (acc, sort = false) {

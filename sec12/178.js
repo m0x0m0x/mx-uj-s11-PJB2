@@ -31,3 +31,5 @@ const d2 = caDaysP(new Date(2024, 1, 12), new Date(2024, 1, 8, 10, 8));
 
 // Using math round , to round up the dates
 console.log(Math.round(d2) + " days");
+
+// Recommendation of moment.js , for complex data operations
