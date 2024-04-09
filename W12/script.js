@@ -213,7 +213,9 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
-// Format day/month/year
+// Experimenting with API
+const now = new Date();
+labelDate.textContent = new Intl.DateTimeFormat("en-GB").format(now);
 
 // Input Login Work
 btnLogin.addEventListener("click", function (e) {
