@@ -97,7 +97,7 @@ const loginVIDZ = document.querySelector(".vidz");
 //////////// ==- you work zone
 
 // Create function to format dates
-const formatMovementDate = function (date) {
+const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
@@ -111,10 +111,12 @@ const formatMovementDate = function (date) {
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
   // THe code here is executed even if else block is not done
-  const day = `${date.getDate()}`.padStart(2, 0);
-  const month = `${date.getMonth() + 1}`.padStart(2, 0);
-  const year = date.getUTCFullYear();
-  return `${day}/${month}/${year}`;
+  // const day = `${date.getDate()}`.padStart(2, 0);
+  // const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  // const year = date.getUTCFullYear();
+  // return `${day}/${month}/${year}`;
+
+  return new Intl.DateTimeFormat("locale").format(date);
 };
 
 const displayMovements = function (acc, sort = false) {
@@ -128,7 +130,7 @@ const displayMovements = function (acc, sort = false) {
     const type = mov > 0 ? "deposit" : "withdrawal";
 
     const date = new Date(acc.movementsDates[i]);
-    const displayDate = formatMovementDate(date);
+    const displayDate = formatMovementDate(date, acc.locale);
 
     const html = `
     <div class="movements__row">
