@@ -23,3 +23,10 @@ if (ingz.includes("cunny")) clearTimeout(puzTimer);
 
 // Asynchronou JS
 console.log("Wating...");
+
+//this will keep running // challenge to make a clock
+// subHead("setInterval Function");
+// setInterval(function () {
+//   const now = new Date();
+//   console.log(now);
+// }, 1000);
