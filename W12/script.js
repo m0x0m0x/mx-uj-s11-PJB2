@@ -119,6 +119,14 @@ const formatMovementDate = function (date, locale) {
   return new Intl.DateTimeFormat("locale").format(date);
 };
 
+// Formattng currencies - reusable func
+const formatCur = function (value, locale, currency) {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currency,
+  }).format(value);
+};
+
 const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = "";
 
@@ -132,10 +140,7 @@ const displayMovements = function (acc, sort = false) {
     const date = new Date(acc.movementsDates[i]);
     const displayDate = formatMovementDate(date, acc.locale);
 
-    const formattedMov = new Intl.NumberFormat(acc.locale, {
-      style: "currency",
-      currency: acc.currency,
-    }).format(mov);
+    const formattedMov = formatCur(mov, acc.locale, acc.currency);
 
     const html = `
     <div class="movements__row">
@@ -156,8 +161,7 @@ const displayMovements = function (acc, sort = false) {
 // Calculating the main balance now using the reduce function
 const calcDisplayBalance = function (acc) {
   acc.balance = acc.movements.reduce((acc, move) => acc + move, 0);
-
-  labelBalance.textContent = `${acc.balance.toFixed(2)} €`;
+  labelBalance.textContent = formatCur(acc.balance, acc.locale, acc.currency);
 };
 // calcDisplayBalance(account1.movements);
 
