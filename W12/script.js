@@ -215,7 +215,16 @@ containerApp.style.opacity = 100;
 
 // Experimenting with API
 const now = new Date();
-labelDate.textContent = new Intl.DateTimeFormat("en-GB").format(now);
+const options = {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+  day: "numeric",
+  month: "long", // numeric, long, 2-digit
+  year: "numeric",
+  weekday: "short",
+};
+labelDate.textContent = new Intl.DateTimeFormat("en-GB", options).format(now);
 
 // Input Login Work
 btnLogin.addEventListener("click", function (e) {
