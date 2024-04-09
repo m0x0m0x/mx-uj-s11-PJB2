@@ -57,6 +57,7 @@ const op2 = {
   //   style: "percent",
   unit: "celsius",
   //   currency: "BTC",
+  //   useGrouping: false, // print without seperators
 };
 const q2 = 1321654468.69;
 const q2f = new Intl.NumberFormat("en-GB", op2).format(q2);
