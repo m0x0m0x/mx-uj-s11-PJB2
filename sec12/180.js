@@ -50,6 +50,7 @@ Formatting by units
 `);
 
 subHead("Testing Percent Signs , curencies ");
+// note the options can be changed and some have conflict
 const op2 = {
   style: "unit",
   //   style: "percent",
