@@ -226,11 +226,7 @@ let currentAccount;
 
 // Logout timer function to be implemented here the called in the code
 const startLogOutTimer = function () {
-  //  1. Set the time 5 mins
-  let time = 10;
-
-  // 2. Call the timer every second
-  const timer = setInterval(function () {
+  const tick = function () {
     // convert seconds to minutes done with math
     const min = String(Math.trunc(time / 60)).padStart(2, 0);
     const sec = String(time % 60).padStart(2, 0);
@@ -245,12 +241,19 @@ const startLogOutTimer = function () {
 
     if (time === 0) {
       clearInterval(timer);
-      labelWelcome.textContent = "LogIn";
+      labelWelcome.textContent = "🤬KICKED OUT !🤬";
       containerApp.style.opacity = 0;
       tableApp.style.opacity = 100;
       loginVIDZ.style.opacity = 0;
+      loginBG.style.backgroundColor = "#2E0249";
     }
-  }, 1000);
+  };
+  //  1. Set the time 5 mins
+  let time = 10;
+
+  // 2. Call the timer every second
+  tick();
+  const timer = setInterval(tick, 1000);
 };
 
 // Input Login Work
