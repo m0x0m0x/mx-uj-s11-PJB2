@@ -220,11 +220,38 @@ const updateUI = function (acc) {
 let currentAccount;
 
 // Fake Login - Disable this to make it back to normal
-currentAccount = account1;
-updateUI(currentAccount);
-containerApp.style.opacity = 100;
+// currentAccount = account1;
+// updateUI(currentAccount);
+// containerApp.style.opacity = 100;
 
-// Experimenting with API
+// Logout timer function to be implemented here the called in the code
+const startLogOutTimer = function () {
+  //  1. Set the time 5 mins
+  let time = 10;
+
+  // 2. Call the timer every second
+  const timer = setInterval(function () {
+    // convert seconds to minutes done with math
+    const min = String(Math.trunc(time / 60)).padStart(2, 0);
+    const sec = String(time % 60).padStart(2, 0);
+
+    // 3. In each call print remaining time to UI
+    labelTimer.textContent = `${min}:${sec}`;
+
+    // Decrease 1 secon
+    time--;
+
+    // 4. When time 0 (expired) , stop timer log out user
+
+    if (time === 0) {
+      clearInterval(timer);
+      labelWelcome.textContent = "LogIn";
+      containerApp.style.opacity = 0;
+      tableApp.style.opacity = 100;
+      loginVIDZ.style.opacity = 0;
+    }
+  }, 1000);
+};
 
 // Input Login Work
 btnLogin.addEventListener("click", function (e) {
@@ -288,6 +315,8 @@ btnLogin.addEventListener("click", function (e) {
     // Clear Input Fields
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
+
+    startLogOutTimer();
 
     // Update UI function
     updateUI(currentAccount);
