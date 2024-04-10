@@ -217,7 +217,7 @@ const updateUI = function (acc) {
 
 //////////////////////////////////////////////////
 /// Event handlers for login
-let currentAccount;
+let currentAccount, timer;
 
 // Fake Login - Disable this to make it back to normal
 // currentAccount = account1;
@@ -234,9 +234,6 @@ const startLogOutTimer = function () {
     // 3. In each call print remaining time to UI
     labelTimer.textContent = `${min}:${sec}`;
 
-    // Decrease 1 secon
-    time--;
-
     // 4. When time 0 (expired) , stop timer log out user
 
     if (time === 0) {
@@ -247,6 +244,9 @@ const startLogOutTimer = function () {
       loginVIDZ.style.opacity = 0;
       loginBG.style.backgroundColor = "#2E0249";
     }
+
+    // Decrease 1 secon
+    time--;
   };
   //  1. Set the time 5 mins
   let time = 10;
@@ -254,6 +254,7 @@ const startLogOutTimer = function () {
   // 2. Call the timer every second
   tick();
   const timer = setInterval(tick, 1000);
+  return timer;
 };
 
 // Input Login Work
@@ -319,7 +320,9 @@ btnLogin.addEventListener("click", function (e) {
     inputLoginUsername.value = inputLoginPin.value = "";
     inputLoginPin.blur();
 
-    startLogOutTimer();
+    // Clear existing timer
+    if (timer) clearInterval(timer);
+    timer = startLogOutTimer();
 
     // Update UI function
     updateUI(currentAccount);
